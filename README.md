@@ -42,7 +42,7 @@
 
 O layout da aplicação foi fornecido através do Figma.
 
-<a href="https://www.figma.com/file/ji0CxxwtPsDV522fKdBac4/Ignite-Teams-(Community)?node-id=37%3A6">
+<a href="https://www.figma.com/file/ji0CxxwtPsDV522fKdBac4/Ignite-Teams-(Community)?node-id=37%3A6" targe="_blank">
   <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Layout-Acesse%20aqui-brightgreen?style=for-the-badge">
 </a>
 
