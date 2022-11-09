@@ -1,11 +1,44 @@
-import { Container, Content, Icon } from "./styles";
+import { useState } from "react";
+import { Alert } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
+import { Input } from "@components/Input";
+import { Button } from "@components/Button";
 import { Header } from "@components/Header";
 import { HighLight } from "@components/Highlight";
-import { Button } from "@components/Button";
-import { Input } from "@components/Input";
+
+import { groupCreate } from "@storage/group/groupCreate";
+
+import { AppError } from "@utils/AppError";
+
+import { Container, Content, Icon } from "./styles";
 
 export function NewGroup() {
+  const [group, setGroup] = useState("");
+
+  const navigation = useNavigation();
+
+  async function handleGroupCreation() {
+    try {
+      // trim() não contabiliza espaços digitados no input
+      if(group.trim().length === 0) {
+        return Alert.alert("Ops!", "Informe o nome da turma");
+      }
+
+
+      await groupCreate(group);
+      navigation.navigate("players", { group });
+      
+    } catch(error) {
+      if(error instanceof AppError) {
+        Alert.alert("Ops!", error.message);
+      } else {
+        Alert.alert("Ops!", "Não foi possível criar um novo grupo");
+        console.log(error);
+      }
+    }
+  }
+
   return (
     <Container>
       <Header showBackButton/>
@@ -18,11 +51,15 @@ export function NewGroup() {
           subtitle="Crie a turma para adicionar as pessoas"
         />
 
-        <Input placeholder="Nome da turma"/>
+        <Input
+          placeholder="Nome da turma"
+          onChangeText={setGroup}
+        />
 
         <Button
           title="Criar"
           style={{marginTop: 20}}
+          onPress={handleGroupCreation}
         />
       </Content>
     </Container>

@@ -3,12 +3,10 @@ import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
 import theme from './src/theme';
 
-import { useFonts, Roboto_400Regular, Roboto_700Bold} from '@expo-google-fonts/roboto';
-
-// import { NewGroup } from '@screens/NewGroup';
-// import { Groups } from '@screens/Groups';
-import { Players } from '@screens/Players';
+import { Routes } from './src/routes';
 import { Loading } from '@components/Loading';
+
+import { useFonts, Roboto_400Regular, Roboto_700Bold} from '@expo-google-fonts/roboto';
 
 export default function App() {
   const [fonstLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold});
@@ -21,7 +19,7 @@ export default function App() {
         translucent
       />
 
-      { fonstLoaded ? <Players/> : <Loading/> }
+      { fonstLoaded ? <Routes/> : <Loading/> }
     </ThemeProvider>
   );
 }
