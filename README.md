@@ -9,11 +9,11 @@
 </h4>
 
 <p align="center">
-  <img alt="Language count" src="https://img.shields.io/github/languages/count/carloshrjunior/todo-list-rn?color=informational&label=Languages&style=for-the-badge">
+  <img alt="Language count" src="https://img.shields.io/github/languages/count/carloshrjunior/ignite-teams-rn?color=informational&label=Languages&style=for-the-badge">
 
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/carloshrjunior/todo-list-rn?color=blueviolet&style=for-the-badge">
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/carloshrjunior/ignite-teams-rn?color=blueviolet&style=for-the-badge">
   
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/carloshrjunior/todo-list-rn?color=green&style=for-the-badge">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/carloshrjunior/ignite-teams-rn?color=green&style=for-the-badge">
 </p>
 
 ## 💻 Sobre o projeto
